@@ -21,4 +21,9 @@ public class User {
     private boolean gender;
     private List<Worker> workers;
     private String phoneNumber;
+
+    public void addWorker(Worker worker)
+    {
+        workers.add(worker);
+    }
 }

@@ -2,13 +2,15 @@ package Repository;
 
 import Entity.Worker;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
+@Repository
 public interface WorkerRepository extends CrudRepository {
-    public Worker findById(@PathVariable Long id);
+    Worker findById(@PathVariable Long id);
 
-    public List<Worker> findByEmail(String email);
+    List<Worker> findByEmail(String email);
 
 }
